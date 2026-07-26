@@ -7,7 +7,7 @@ export default function Home() {
         </p>
 
         <h1 className="text-5xl font-semibold tracking-tight sm:text-7xl">
-          Mon environnement de développement est prêt
+          Mon workflow de développement avec Next.js et Vercel est prêt !!
         </h1>
 
         <p className="mt-6 text-lg leading-8 text-neutral-300">
