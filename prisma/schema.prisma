@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum ContactMessageStatus {
+  RECEIVED
+  EMAIL_SENT
+  EMAIL_FAILED
+}
+
+model ContactMessage {
+  id        String               @id @default(cuid())
+  name      String
+  email     String
+  subject   String?
+  message   String
+  status    ContactMessageStatus @default(RECEIVED)
+  createdAt DateTime             @default(now())
+  updatedAt DateTime             @updatedAt
+
+  @@index([createdAt])
+  @@index([status])
+}
