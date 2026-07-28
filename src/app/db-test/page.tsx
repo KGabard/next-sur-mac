@@ -10,15 +10,11 @@ export default async function DatabaseTestPage() {
           Neon + Prisma
         </p>
 
-        <h1 className="mt-4 text-4xl font-semibold">
-          Connexion réussie
-        </h1>
+        <h1 className="mt-4 text-4xl font-semibold">Connexion réussie</h1>
 
         <p className="mt-6 text-neutral-300">
           Nombre de messages enregistrés :{" "}
-          <strong className="text-white">
-            {contactMessageCount}
-          </strong>
+          <strong className="text-white">{contactMessageCount}</strong>
         </p>
       </section>
     </main>

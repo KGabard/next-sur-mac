@@ -12,9 +12,7 @@ export function Header() {
         NATH PHOTO{" "}
       </Link>
 
-      <nav
-        className={`flex gap-6 text-sm transition text-white`}
-      >
+      <nav className={`flex gap-6 text-sm transition text-white`}>
         <Link href="/portfolio" className="transition hover:text-current/80">
           Portfolio
         </Link>

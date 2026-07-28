@@ -3,10 +3,13 @@
 import { LoaderCircle, Send } from "lucide-react";
 import { useActionState } from "react";
 
-import {
-  initialContactFormState,
-  sendContactMessage,
-} from "@/app/contact/actions";
+import type { ContactFormState } from "@/app/contact/actions";
+import { sendContactMessage } from "@/app/contact/actions";
+
+const initialContactFormState: ContactFormState = {
+  status: "idle",
+  message: "",
+};
 
 export function ContactForm() {
   const [state, formAction, pending] = useActionState(
@@ -30,9 +33,7 @@ export function ContactForm() {
         />
 
         {state.errors?.name && (
-          <p className="mt-2 text-sm text-red-600">
-            {state.errors.name[0]}
-          </p>
+          <p className="mt-2 text-sm text-red-600">{state.errors.name[0]}</p>
         )}
       </div>
 
@@ -50,9 +51,7 @@ export function ContactForm() {
         />
 
         {state.errors?.email && (
-          <p className="mt-2 text-sm text-red-600">
-            {state.errors.email[0]}
-          </p>
+          <p className="mt-2 text-sm text-red-600">{state.errors.email[0]}</p>
         )}
       </div>
 
@@ -83,9 +82,7 @@ export function ContactForm() {
         />
 
         {state.errors?.message && (
-          <p className="mt-2 text-sm text-red-600">
-            {state.errors.message[0]}
-          </p>
+          <p className="mt-2 text-sm text-red-600">{state.errors.message[0]}</p>
         )}
       </div>
 

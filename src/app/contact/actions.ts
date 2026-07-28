@@ -36,11 +36,6 @@ export type ContactFormState = {
   };
 };
 
-export const initialContactFormState: ContactFormState = {
-  status: "idle",
-  message: "",
-};
-
 export async function sendContactMessage(
   _previousState: ContactFormState,
   formData: FormData,
